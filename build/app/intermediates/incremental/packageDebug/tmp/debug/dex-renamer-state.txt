@@ -1,0 +1,4 @@
+#Tue Apr 09 19:55:35 IST 2024
+base.0=/Users/sanketkumar/Projects/Flutter Projects/news_bloc_clean/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

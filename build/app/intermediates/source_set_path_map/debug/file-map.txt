@@ -1,0 +1,12 @@
+com.example.news_bloc_clean.app-jetified-window-1.0.0-beta04-0 /Users/sanketkumar/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/res
+com.example.news_bloc_clean.app-jetified-annotation-experimental-1.1.0-1 /Users/sanketkumar/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/res
+com.example.news_bloc_clean.app-core-1.6.0-2 /Users/sanketkumar/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/res
+com.example.news_bloc_clean.app-jetified-window-java-1.0.0-beta04-3 /Users/sanketkumar/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/res
+com.example.news_bloc_clean.app-debug-4 /Users/sanketkumar/Projects/Flutter Projects/news_bloc_clean/android/app/src/debug/res
+com.example.news_bloc_clean.app-main-5 /Users/sanketkumar/Projects/Flutter Projects/news_bloc_clean/android/app/src/main/res
+com.example.news_bloc_clean.app-pngs-6 /Users/sanketkumar/Projects/Flutter Projects/news_bloc_clean/build/app/generated/res/pngs/debug
+com.example.news_bloc_clean.app-resValues-7 /Users/sanketkumar/Projects/Flutter Projects/news_bloc_clean/build/app/generated/res/resValues/debug
+com.example.news_bloc_clean.app-rs-8 /Users/sanketkumar/Projects/Flutter Projects/news_bloc_clean/build/app/generated/res/rs/debug
+com.example.news_bloc_clean.app-mergeDebugResources-9 /Users/sanketkumar/Projects/Flutter Projects/news_bloc_clean/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
+com.example.news_bloc_clean.app-mergeDebugResources-10 /Users/sanketkumar/Projects/Flutter Projects/news_bloc_clean/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+com.example.news_bloc_clean.app-merged_res-11 /Users/sanketkumar/Projects/Flutter Projects/news_bloc_clean/build/app/intermediates/merged_res/debug
