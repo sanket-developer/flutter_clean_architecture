@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_bloc_clean/post_bloc.dart';
-import 'package:news_bloc_clean/post_event.dart';
-import 'package:news_bloc_clean/post_state.dart';
 
-class PostList extends StatelessWidget {
-  const PostList({super.key});
+import 'package:news_bloc_clean/presentation/widgets/progress.dart' as Progress;
+import 'package:news_bloc_clean/presentation/widgets/centre_text_widget.dart';
+
+import '../../domin/post_bloc/post_bloc.dart';
+import '../../domin/post_bloc/post_event.dart';
+import '../../domin/post_bloc/post_state.dart';
+
+class PostListScreen extends StatelessWidget {
+  const PostListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +21,9 @@ class PostList extends StatelessWidget {
       ),
       body: BlocBuilder<PostBloc, PostState>(
         builder: (context, state) {
-          if (state is PostLoading) {
-            return Center(child: CircularProgressIndicator());
-          } else if (state is PostLoaded) {
+          if (state is PostLoadingState) {
+            return const Progress.ProgressIndicator();
+          } else if (state is PostLoadedState) {
             return ListView.builder(
               itemCount: state.posts.length,
               itemBuilder: (context, index) {
@@ -29,18 +33,18 @@ class PostList extends StatelessWidget {
                 );
               },
             );
-          } else if (state is PostError) {
-            return Center(child: Text(state.message));
-          } else if (state is PostInitial) {
-            return const Center(child: Text('Tap Refresh to Load'));
+          } else if (state is PostErrorState) {
+            return CentreTextWidget(state.message);
+          } else if (state is PostInitialState) {
+            return const CentreTextWidget('Tap Refresh to Load');
           } else {
-            return const Center(child: Text('Something went wrong'));
+            return const CentreTextWidget('Something went wrong');
           }
         },
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          postBloc.add(FetchPosts()); // Add FetchPosts event
+          postBloc.add(FetchPostsEvent()); // Add FetchPosts event
         },
         child: Icon(Icons.refresh),
       ),

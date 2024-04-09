@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_bloc_clean/post_bloc.dart';
-import 'package:news_bloc_clean/post_list.dart';
-import 'package:news_bloc_clean/post_repository.dart';
+import 'package:news_bloc_clean/presentation/screens/post_list_screen.dart';
+import 'package:news_bloc_clean/data/post_repository.dart';
+
+import 'domin/post_bloc/post_bloc.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,9 +20,8 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocProvider(
         create: (context) => PostBloc(repository: PostRepository()),
-        child: const PostList(),
+        child: const PostListScreen(),
       ),
     );
   }
 }
-

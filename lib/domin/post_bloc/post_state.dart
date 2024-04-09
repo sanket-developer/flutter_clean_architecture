@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:news_bloc_clean/post.dart';
+import 'package:news_bloc_clean/domin/post.dart';
 
 abstract class PostState extends Equatable {
   const PostState();
@@ -8,23 +8,23 @@ abstract class PostState extends Equatable {
   List<Object?> get props => [];
 }
 
-class PostInitial extends PostState {}
+class PostInitialState extends PostState {}
 
-class PostLoading extends PostState {}
+class PostLoadingState extends PostState {}
 
-class PostLoaded extends PostState {
+class PostLoadedState extends PostState {
   final List<Post> posts;
 
-  const PostLoaded(this.posts);
+  const PostLoadedState(this.posts);
 
   @override
   List<Object?> get props => [posts];
 }
 
-class PostError extends PostState {
+class PostErrorState extends PostState {
   final String message;
 
-  const PostError(this.message);
+  const PostErrorState(this.message);
 
   @override
   List<Object?> get props => [message];

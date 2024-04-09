@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:news_bloc_clean/post.dart';
+import 'package:news_bloc_clean/domin/post.dart';
 
 class PostRepository {
   Future<List<Post>> fetchPosts() async {
