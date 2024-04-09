@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
 class CentreTextWidget extends StatelessWidget {
-  const CentreTextWidget(
-    String msg, {
-    super.key,
-  });
+  final String msg;
 
-  String get msg => this.msg;
+  const CentreTextWidget(
+    this.msg, {
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text(msg));
+    return Center(
+      child: Text(msg),
+    );
   }
 }
