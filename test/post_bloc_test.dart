@@ -1,11 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:news_bloc_clean/post.dart';
-import 'package:news_bloc_clean/post_bloc.dart';
-import 'package:news_bloc_clean/post_event.dart';
-import 'package:news_bloc_clean/post_repository.dart';
-import 'package:news_bloc_clean/post_state.dart';
-
+import 'package:news_bloc_clean/domin/post.dart';
+import 'package:news_bloc_clean/data/post_repository.dart';
+import 'package:news_bloc_clean/domin/post_bloc/post_bloc.dart';
+import 'package:news_bloc_clean/domin/post_bloc/post_event.dart';
+import 'package:news_bloc_clean/domin/post_bloc/post_state.dart';
 
 class MockPostRepository extends Mock implements PostRepository {}
 
@@ -24,7 +23,7 @@ void main() {
 
   group('PostBloc', () {
     test('initial state is correct', () {
-      expect(postBloc.state, equals(PostInitial()));
+      expect(postBloc.state, equals(PostInitialState()));
     });
 
     test('emits [PostLoading, PostLoaded] when FetchPosts is added', () {
@@ -33,16 +32,17 @@ void main() {
         Post(id: 2, title: 'Title 2', body: 'Body 2'),
       ];
 
-      when(() => mockPostRepository.fetchPosts()).thenAnswer((_) async => posts);
+      when(() => mockPostRepository.fetchPosts())
+          .thenAnswer((_) async => posts);
 
       final expectedResponse = [
-        PostLoading(),
-        PostLoaded(posts),
+        PostLoadingState(),
+        PostLoadedState(posts),
       ];
 
       expectLater(postBloc.stream, emitsInOrder(expectedResponse));
 
-      postBloc.add(FetchPosts());
+      postBloc.add(FetchPostsEvent());
     });
 
     test('emits [PostLoading, PostError] when FetchPosts throws an error', () {
@@ -51,13 +51,13 @@ void main() {
       when(() => mockPostRepository.fetchPosts()).thenThrow(exception);
 
       final expectedResponse = [
-        PostLoading(),
-        PostError('Failed to fetch posts'),
+        PostLoadingState(),
+        PostErrorState('Failed to fetch posts'),
       ];
 
       expectLater(postBloc.stream, emitsInOrder(expectedResponse));
 
-      postBloc.add(FetchPosts());
+      postBloc.add(FetchPostsEvent());
     });
   });
 }

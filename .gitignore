@@ -1,0 +1,16 @@
+android/.gradle/7.5/executionHistory/executionHistory.bin
+android/.gradle/7.5/executionHistory/executionHistory.lock
+android/.gradle/7.5/fileHashes/fileHashes.bin
+android/.gradle/7.5/fileHashes/fileHashes.lock
+android/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+android/.gradle/buildOutputCleanup/outputFiles.bin
+build/9ffe3fb9e2063e195ddfbcea0cabcfef.cache.dill.track.dill
+build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin
+build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar
+build/app/intermediates/flutter/debug/flutter_build.d
+build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin
+build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt
+build/app/outputs/apk/debug/app-debug.apk
+build/app/outputs/flutter-apk/app-debug.apk
+build/app/outputs/flutter-apk/app-debug.apk.sha1
+build/test_cache/build/c075001b96339384a97db4862b8ab8db.cache.dill.track.dill
